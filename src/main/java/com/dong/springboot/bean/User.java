@@ -1,6 +1,8 @@
 package com.dong.springboot.bean;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Created by IntelliJ IDEA.
  * User: ZhangDong
@@ -11,6 +13,7 @@ public class User {
     private int id;
     private String name;
     private int age;
+//    @JsonIgnore
     private double money;
 
     public User() {

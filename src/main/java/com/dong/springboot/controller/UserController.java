@@ -1,9 +1,12 @@
 package com.dong.springboot.controller;
 
 import com.dong.springboot.bean.User;
+import com.dong.springboot.pojo.JSONResult;
+import com.dong.springboot.resource.Resource;
 import com.dong.springboot.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +30,12 @@ public class UserController {
     @RequestMapping("/query{name}")
     public User testQuery(@PathVariable String name) {
         return userService.selectUserByName(name);
+    }
+
+    @RequestMapping("/query/query{name}")
+    public JSONResult testQuery2(@PathVariable String name) {
+        User user = userService.selectUserByName(name);
+        return JSONResult.ok(user);
     }
 
     @RequestMapping("/insert")
