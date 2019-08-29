@@ -1,70 +1,53 @@
 package com.dong.springboot.bean;
 
-
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-/**
- * Created by IntelliJ IDEA.
- * User: ZhangDong
- * Date: 2019/7/30 14:23
- */
+import java.util.Date;
+
 public class User {
-
-    private int id;
-    private String name;
-    private int age;
-//    @JsonIgnore
-    private double money;
-
-    public User() {
-    }
-
-    public User(int id, String name, int age, double money) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.money = money;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public double getMoney() {
-        return money;
-    }
-
-    public void setMoney(double money) {
-        this.money = money;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", money=" + money +
-                '}';
-    }
+	
+	private String name;
+	
+	@JsonIgnore
+	private String password;
+	private Integer age;
+	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss a", locale="zh", timezone="GMT+8")
+	private Date birthday;
+	
+	@JsonInclude(Include.NON_NULL)
+	private String desc;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Integer getAge() {
+		return age;
+	}
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public Date getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+	public String getDesc() {
+		return desc;
+	}
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
 }

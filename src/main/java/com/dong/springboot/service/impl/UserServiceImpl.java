@@ -29,20 +29,20 @@ public class UserServiceImpl implements UserService {
      * 根据名字查找用户
      */
     public User selectUserByName(String name) {
-
-
+//
+//
 //        if (redisTemplate.opsForValue().get(name) == null) {
-////            User user = userDao.findUserByName(name);
-////            redisTemplate.opsForValue().set(user.getName(),user);
+//            User user = userDao.findUserByName(name);
+//            redisTemplate.opsForValue().set(user.getName(),user);
 //            redisTemplate.opsForValue().set("关羽",new User(1002,"关羽",35,3000));
-            return new User(1001,"张飞",30,2000);
-//        } else {
+//            return new User(1001,"张飞",30,2000);
+//       } else {
 //            User user = (User) redisTemplate.opsForValue().get(name);
 //
-//            return user;
+        return null;
 //        }
-
-
+//
+//
     }
 
     /**
