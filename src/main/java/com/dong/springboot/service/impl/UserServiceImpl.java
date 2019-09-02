@@ -28,6 +28,7 @@ public class UserServiceImpl implements UserService {
     /**
      * 根据名字查找用户
      */
+    @Override
     public User selectUserByName(String name) {
 //
 //
@@ -48,6 +49,7 @@ public class UserServiceImpl implements UserService {
     /**
      * 查找所有用户
      */
+    @Override
     public List<User> selectAllUser() {
         return userDao.findAllUser();
     }
@@ -55,6 +57,7 @@ public class UserServiceImpl implements UserService {
     /**
      * 插入两个用户
      */
+    @Override
     public void insertService() {
         userDao.insertUser("SnailClimb", 22, 3000.0);
         userDao.insertUser("Daisy", 19, 3000.0);
@@ -64,6 +67,7 @@ public class UserServiceImpl implements UserService {
      * 根据id 删除用户
      */
 
+    @Override
     public void deleteService(int id) {
         userDao.deleteUser(id);
     }
@@ -71,6 +75,7 @@ public class UserServiceImpl implements UserService {
     /**
      * 模拟事务。由于加上了 @Transactional注解，如果转账中途出了意外 SnailClimb 和 Daisy 的钱都不会改变。
      */
+    @Override
     @Transactional
     public void changemoney() {
         try {

@@ -9,7 +9,9 @@ spring:
     data-username: root
     data-password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-
+  #设置静态文件路径，js，css等
+  mvc:
+    static-path-pattern: /static/**
   # freemarker 静态资源配置
   freemarker:
     #设定ftl文件路径
@@ -34,6 +36,7 @@ spring:
       content-type: text/html
   # 关闭缓存, 即时刷新, 上线生产环境需要改为true
     cache: false
+
 
 
 #热部署生效
