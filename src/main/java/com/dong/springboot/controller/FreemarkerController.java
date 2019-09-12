@@ -6,6 +6,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * Created by IntelliJ IDEA.
+ * User: ZhangDong
+ * Date: 2019/8/28 16:17
+ */
 @Controller
 @RequestMapping("ftl")
 public class FreemarkerController {
