@@ -18,7 +18,6 @@ public class User {
 	private Integer age;
 	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss a", locale="zh", timezone="GMT+8")
 	private Date birthday;
-	
 	@JsonInclude(Include.NON_NULL)
 	private String desc;
 

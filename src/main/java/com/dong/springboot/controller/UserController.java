@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
  * Date: 2019/7/29 15:13
  */
 
-//@Controller
 @RestController		// @RestController = @Controller + @ResponseBody
 @RequestMapping("/user")
 public class UserController {

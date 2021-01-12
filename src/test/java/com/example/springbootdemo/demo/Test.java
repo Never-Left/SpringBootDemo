@@ -1,4 +1,4 @@
-package com.example.SpringBootDemo.Demo;
+package com.example.springbootdemo.demo;
 
 /**
  * Created by IntelliJ IDEA.
@@ -9,10 +9,7 @@ package com.example.SpringBootDemo.Demo;
 public class Test {
 
     public static void main(String[] args) {
-        byte b = 127;
-        System.out.println(b);
-        b++;
-        System.out.println(b);
+
     }
 
 
