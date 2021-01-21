@@ -11,7 +11,7 @@ import java.util.Set;
 public class LengthOfLongestSubstring {
 
     public static void main(String[] args) {
-        System.out.println(new LengthOfLongestSubstring().lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(new LengthOfLongestSubstring().lengthOfLongestSubstring2("aabaab!bb"));
     }
 
     /**
@@ -51,7 +51,7 @@ public class LengthOfLongestSubstring {
             set.add(s.substring(i, i + 1));
         }
         for (int i = set.size(); i > 0; i--) {
-            for (int j = 0; j < set.size(); j++) {
+            for (int j = 0; j < s.length(); j++) {
                 try {
                     String str = s.substring(j, i + j);
                     Set<String> set2 = new HashSet<>();
@@ -66,7 +66,6 @@ public class LengthOfLongestSubstring {
                 }
             }
         }
-
         return 0;
     }
 }
