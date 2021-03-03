@@ -41,6 +41,6 @@ public class UserController {
         u.setPassword("123456");
         u.setDesc("燕人张飞是也~~");
 
-        return JSONResult.ok(u);
+        return JSONResult.success(u);
     }
 }

@@ -23,7 +23,12 @@ public class HelloController {
     public JSONResult getResourceUser(){
         Resource resource2 = new Resource();
         BeanUtils.copyProperties(resource,resource2);
-        return JSONResult.ok(resource2);
+        return JSONResult.success(resource2);
+    }
+
+    @RequestMapping("/hello")
+    public JSONResult hello(){
+        return JSONResult.success("Hello");
     }
 
 }

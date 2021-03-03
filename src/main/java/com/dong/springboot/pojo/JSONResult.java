@@ -40,7 +40,7 @@ public class JSONResult {
         return new JSONResult(status, msg, data);
     }
 
-    public static JSONResult ok(Object data) {
+    public static JSONResult success(Object data) {
         return new JSONResult(data);
     }
 
@@ -80,7 +80,7 @@ public class JSONResult {
 
     public JSONResult(Object data) {
         this.status = 200;
-        this.msg = "OK";
+        this.msg = "success";
         this.data = data;
     }
 
